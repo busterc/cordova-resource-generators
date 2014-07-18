@@ -20,7 +20,7 @@ if [ "$UNAME" != "Darwin" ] ; then
 	exit 1
 fi
 
-INSTALL_URL="https://github.com/busterc/cordova-resource-generators/"
+INSTALL_URL="https://raw.githubusercontent.com/busterc/cordova-resource-generators/master"
 PREFIX="/usr/local"
 INSTALL_BIN="$PREFIX/bin"
 
