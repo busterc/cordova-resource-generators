@@ -40,24 +40,25 @@ function androidConvertIcon() {
 androidConvertIcon
 
 function iosConvertIcon() {
-	$convert -resize 29x29 "$output/ios/Icon-Small.png"
-	$convert -resize 40x40 "$output/ios/Icon-Small-40.png"
-	$convert -resize 50x50 "$output/ios/Icon-Small-50.png"
-	$convert -resize 57x57 "$output/ios/Icon.png"
-	$convert -resize 58x58 "$output/ios/Icon-Small@2x.png"
-	$convert -resize 72x72 "$output/ios/Icon-72.png"
-	$convert -resize 76x76 "$output/ios/Icon-76.png"
-	$convert -resize 80x80 "$output/ios/Icon-Small-40@2x.png"
-	$convert -resize 100x100 "$output/ios/Icon-Small-50@2x.png"
-	$convert -resize 114x114 "$output/ios/Icon@2x.png"
-	$convert -resize 120x120 "$output/ios/Icon-60@2x.png"
-	$convert -resize 144x144 "$output/ios/Icon-72@2x.png"
-	$convert -resize 152x152 "$output/ios/Icon-76@2x.png"
+	$convert -resize 29x29 "$output/ios/icon-small.png"
+	$convert -resize 40x40 "$output/ios/icon-40.png"
+	$convert -resize 50x50 "$output/ios/icon-50.png"
+	$convert -resize 57x57 "$output/ios/icon.png"
+	$convert -resize 58x58 "$output/ios/icon-small@2x.png"
+	$convert -resize 60x60 "$output/ios/icon-60.png"
+	$convert -resize 72x72 "$output/ios/icon-72.png"
+	$convert -resize 76x76 "$output/ios/icon-76.png"
+	$convert -resize 80x80 "$output/ios/icon-40@2x.png"
+	$convert -resize 100x100 "$output/ios/icon-50@2x.png"
+	$convert -resize 114x114 "$output/ios/icon@2x.png"
+	$convert -resize 120x120 "$output/ios/icon-60@2x.png"
+	$convert -resize 144x144 "$output/ios/icon-72@2x.png"
+	$convert -resize 152x152 "$output/ios/icon-76@2x.png"
 	$convert -resize 512x512 "$output/ios/iTunesArtwork.png"
 	$convert -resize 1024x1024 "$output/ios/iTunesArtwork@2x.png"
 
 	function iosCopyIcon() {
-		cp $(find . | grep "resources/icon/ios/.*\.png") $(find . -type d | grep "platforms/ios/.*Resources/icons")
+		cp $(find . | grep "resources/icon/ios/.*\.png") "$(find . -type d | grep 'platforms/ios/.*Resources/icons')"
 	}
 	iosCopyIcon
 }

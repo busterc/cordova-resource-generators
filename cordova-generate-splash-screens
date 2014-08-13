@@ -53,7 +53,7 @@ function iosConvertSplash() {
 	$convert -resize 256x256 -extent 640x960 "$output/ios/Default@2x~iphone.png"
 
 	function iosCopySplash() {
-		cp $(find . | grep "resources/splash/ios/.*\.png") $(find . -type d | grep "platforms/ios/.*/Resources/splash")
+		cp $(find . | grep "resources/splash/ios/.*\.png") "$(find . -type d | grep 'platforms/ios/.*/Resources/splash')"
 	}
 	iosCopySplash
 }
