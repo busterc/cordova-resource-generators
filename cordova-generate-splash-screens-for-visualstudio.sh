@@ -1,5 +1,6 @@
 #!/bin/bash
 # Generate Cordova splash screens
++# refer:https://msdn.microsoft.com/en-us/library/dn757053.aspx
 
 function usage() {
 	echo "usage: $0 <image-filename> <background-color> [output-directory]";
