@@ -1,4 +1,4 @@
-  <!-- custom icons, splash screens, and splash screen delay time -->
+<!-- custom icons, splash screens, and splash screen delay time -->
   <!-- refer to http://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html -->
   <preference name="SplashScreenDelay" value="3000" />
   <platform name="android">
@@ -9,8 +9,8 @@
     <!-- you can use any density that exists in the Android project -->
     <splash src="res/screens/android/screen-land-hdpi.png" density="land-hdpi"/>
     <splash src="res/screens/android/screen-land-ldpi.png" density="land-ldpi"/>
-    <splash src="res/screens/android/screen-hdpi-portrait" density="land-mdpi"/>
-    <splash src="res/screens/android/screen-xhdpi-portrait" density="land-xhdpi"/>
+    <splash src="res/screens/android/screen-land-mdpi.png" density="land-mdpi"/>
+    <splash src="res/screens/android/screen-land-xhdpi.png" density="land-xhdpi"/>
     <splash src="res/screens/android/screen-port-hdpi.png" density="port-hdpi"/>
     <splash src="res/screens/android/screen-port-ldpi.png" density="port-ldpi"/>
     <splash src="res/screens/android/screen-port-mdpi.png" density="port-mdpi"/>
@@ -44,7 +44,7 @@
     <!-- iPad Spotlight and Settings Icon -->
     <icon src="res/icons/ios/icon-50.png" width="50" height="50" />
     <icon src="res/icons/ios/icon-50@2x.png" width="100" height="100" />
-    
+
     <!-- images are determined by width and height. The following are supported -->
     <splash src="res/screens/ios/Default~iphone.png" width="320" height="480"/>
     <splash src="res/screens/ios/Default@2x~iphone.png" width="640" height="960"/>
@@ -62,7 +62,7 @@
     <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
     <!-- tile image -->
     <icon src="res/icons/wp8/Background.png" width="159" height="159" />
-    
+
     <!-- images are determined by width and height. The following are supported -->
     <splash src="res/screens/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
   </platform>
@@ -75,9 +75,3 @@
     <splash src="res/screens/windows8/splashscreen.png" width="620" height="300"/>
     <splash src="res/screens/windows8/SplashScreen.scale-240.png" width="1152" height="1920"/>
   </platform>
-
-  <!--<platform name="blackberry10">
-    --><!-- Add a rim:splash element for each resolution and locale you wish --><!--
-    --><!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html --><!--
-    <rim:splash src="res/screens/windows8/splashscreen.png"/>
-  </platform>-->
