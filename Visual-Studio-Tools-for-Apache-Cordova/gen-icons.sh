@@ -1,6 +1,6 @@
 #!/bin/bash
 # Generate Cordova icons
-# refer to:http://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html
+# refer to: http://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html
 function usage() {
 	echo "usage: $0 <image-filename> [output-directory]";
 	exit 1;
