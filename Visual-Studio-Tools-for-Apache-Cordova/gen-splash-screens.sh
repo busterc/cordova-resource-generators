@@ -1,6 +1,6 @@
 #!/bin/bash
 # Generate Cordova splash screens
-
+# refer to: http://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html
 function usage() {
 	echo "usage: $0 <image-filename> <background-color> [output-directory]";
 	exit 1;
@@ -12,6 +12,7 @@ function usage() {
 image=$1
 bgcolor=$2
 output=$3/res/screens
+temp=$3
 devices=ios,android,windows8,wp8 #,windows-phone,bada,bada-wac,blackberry,webos
 eval mkdir -p "$output/{$devices}"
 
@@ -21,10 +22,10 @@ set -x
 convert="convert $1 -background $bgcolor -gravity center"
 function cache()
 {
-	c128="$3/c128.png"
-	c256="$3/c256.png"
-	c512="$3/c512.png"
-	c1024="$3/c1024.png"
+	c128="$temp/c128.png"
+	c256="$temp/c256.png"
+	c512="$temp/c512.png"
+	c1024="$temp/c1024.png"
 	$convert -resize 128x128 "$c128"
 	$convert -resize 256x256 "$c256"
 	$convert -resize 512x512 "$c512"
@@ -36,14 +37,14 @@ function cache()
 }
 function clearcache()
 {
-	rm $3/cache128.png
-	rm $3/cache256.png
-	rm $3/cache512.png
-	rm $3/cache1024.png
+	rm $temp/c128.png
+	rm $temp/c256.png
+	rm $temp/c512.png
+	rm $temp/c1024.png
 }
 cache
 function androidConvertSplash() {
- 	$convertfrom512 -extent 720x1280 "$output/android/screen-port-xhdpi.png"
+	$convertfrom512 -extent 720x1280 "$output/android/screen-port-xhdpi.png"
  	$convertfrom256 -extent 480x800 "$output/android/screen-port-hdpi.png"
  	$convertfrom256 -extent 320x480 "$output/android/screen-port-mdpi.png"
  	$convertfrom128 -extent 200x320 "$output/android/screen-port-ldpi.png"
