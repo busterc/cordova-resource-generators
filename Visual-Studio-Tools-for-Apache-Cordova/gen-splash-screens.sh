@@ -1,6 +1,6 @@
 #!/bin/bash
 # Generate Cordova splash screens
-# refer to:http://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html
+
 function usage() {
 	echo "usage: $0 <image-filename> <background-color> [output-directory]";
 	exit 1;
@@ -43,15 +43,15 @@ function clearcache()
 }
 cache
 function androidConvertSplash() {
- 	$convertfrom512 -extent 720x1280 "$output/android/screen-xhdpi-portrait.png"
- 	$convertfrom256 -extent 480x800 "$output/android/screen-hdpi-portrait.png"
- 	$convertfrom256 -extent 320x480 "$output/android/screen-mdpi-portrait.png"
- 	$convertfrom128 -extent 200x320 "$output/android/screen-ldpi-portrait.png"
+ 	$convertfrom512 -extent 720x1280 "$output/android/screen-port-xhdpi.png"
+ 	$convertfrom256 -extent 480x800 "$output/android/screen-port-hdpi.png"
+ 	$convertfrom256 -extent 320x480 "$output/android/screen-port-mdpi.png"
+ 	$convertfrom128 -extent 200x320 "$output/android/screen-port-ldpi.png"
 
- 	$convertfrom512 -extent 1280x720 "$output/android/screen-xhdpi-landscape.png"
- 	$convertfrom256 -extent 800x480 "$output/android/screen-hdpi-landscape.png"
- 	$convertfrom256 -extent 480x320 "$output/android/screen-mdpi-landscape.png"
- 	$convertfrom128 -extent 320x200 "$output/android/screen-ldpi-landscape.png"
+ 	$convertfrom512 -extent 1280x720 "$output/android/screen-land-xhdpi.png"
+ 	$convertfrom256 -extent 800x480 "$output/android/screen-land-hdpi.png"
+ 	$convertfrom256 -extent 480x320 "$output/android/screen-land-mdpi.png"
+ 	$convertfrom128 -extent 320x200 "$output/android/screen-land-ldpi.png"
 }
 androidConvertSplash
 
