@@ -1,11 +1,11 @@
-<!-- custom icons, splash screens, and splash screen delay time -->
+  <!-- custom icons, splash screens, and splash screen delay time -->
   <!-- refer to http://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html -->
   <preference name="SplashScreenDelay" value="3000" />
   <platform name="android">
-    <icon src="res/android/ldpi.png" density="ldpi" />
-    <icon src="res/android/mdpi.png" density="mdpi" />
-    <icon src="res/android/hdpi.png" density="hdpi" />
-    <icon src="res/android/xhdpi.png" density="xhdpi" />
+    <icon src="res/icons/android/ldpi.png" density="ldpi" />
+    <icon src="res/icons/android/mdpi.png" density="mdpi" />
+    <icon src="res/icons/android/hdpi.png" density="hdpi" />
+    <icon src="res/icons/android/xhdpi.png" density="xhdpi" />
     <!-- you can use any density that exists in the Android project -->
     <splash src="res/screens/android/screen-land-hdpi.png" density="land-hdpi"/>
     <splash src="res/screens/android/screen-land-ldpi.png" density="land-ldpi"/>
@@ -68,10 +68,16 @@
   </platform>
 
   <platform name="windows8">
-    <icon src="res/windows8/logo.png" width="150" height="150" />
-    <icon src="res/windows8/smalllogo.png" width="30" height="30" />
-    <icon src="res/windows8/storelogo.png" width="50" height="50" />
+    <icon src="res/icons/windows8/logo.png" width="150" height="150" />
+    <icon src="res/icons/windows8/smalllogo.png" width="30" height="30" />
+    <icon src="res/icons/windows8/storelogo.png" width="50" height="50" />
     <!-- images are determined by width and height. The following are supported -->
     <splash src="res/screens/windows8/splashscreen.png" width="620" height="300"/>
     <splash src="res/screens/windows8/SplashScreen.scale-240.png" width="1152" height="1920"/>
   </platform>
+
+  <!--<platform name="blackberry10">
+    --><!-- Add a rim:splash element for each resolution and locale you wish --><!--
+    --><!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html --><!--
+    <rim:splash src="res/screens/windows8/splashscreen.png"/>
+  </platform>-->
