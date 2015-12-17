@@ -12,7 +12,7 @@ Quickly generate mobile app icons and splash screens for Cordova builds and have
 * Use aliases, if that's your thang
 
 ## Version
-0.1.0
+0.2.0
 
 ## Installation on OS X
 ```sh
@@ -47,7 +47,7 @@ alias cgscreens="cordova-generate-splash-screens"
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2014 Buster Collings
+Copyright &copy; 2014-2015 Buster Collings
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
