@@ -54,6 +54,7 @@ function iosConvertIcon() {
 	$convert -resize 120x120 "$output/ios/icon-60@2x.png"
 	$convert -resize 144x144 "$output/ios/icon-72@2x.png"
 	$convert -resize 152x152 "$output/ios/icon-76@2x.png"
+	$convert -resize 180x180 "$output/ios/icon-60@3x.png"
 	$convert -resize 512x512 "$output/ios/iTunesArtwork.png"
 	$convert -resize 1024x1024 "$output/ios/iTunesArtwork@2x.png"
 
